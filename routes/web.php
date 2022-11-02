@@ -64,25 +64,5 @@ Route::middleware(['auth', 'access'])->group(function () {
     Route::post('/administrator/user-access/checked', [UserAccessController::class, 'checked'])->name('cms.user-access.checked');
 
 
-    // Country
-    Route::get('/administrator/country', [CountryController::class, 'index'])->name('cms.country');
-    Route::post('/administrator/country', [CountryController::class, 'store'])->name('cms.country.store');
-    Route::patch('/administrator/country', [CountryController::class, 'update'])->name('cms.country.update');
-    Route::delete('/administrator/country', [CountryController::class, 'destroy'])->name('cms.country.delete');
-
-
-    // Category
-    Route::get('/administrator/category', [CategoryController::class, 'index'])->name('cms.category');
-    Route::post('/administrator/category', [CategoryController::class, 'store'])->name('cms.category.store');
-    Route::patch('/administrator/category', [CategoryController::class, 'update'])->name('cms.category.update');
-    Route::delete('/administrator/category', [CategoryController::class, 'destroy'])->name('cms.category.delete');
-
-
-    // Payment Type
-    Route::get('/administrator/payment', [PaymentController::class, 'index'])->name('cms.payment');
-    Route::post('/administrator/payment', [PaymentController::class, 'store'])->name('cms.payment.store');
-    Route::patch('/administrator/payment', [PaymentController::class, 'update'])->name('cms.payment.update');
-    Route::delete('/administrator/payment', [PaymentController::class, 'destroy'])->name('cms.payment.delete');
-
     Route::get('/administrator/logout', [AuthController::class, 'logout'])->name('logout');
 });
